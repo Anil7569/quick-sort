@@ -1,14 +1,14 @@
 'use strict';
 
 function quickSort(input) {
-    if (input === Array && input.length >= 0) {
+    if (Array.isArray(input) && input.length >= 0) {
         if (input.length == 0) {
             return input;
         } else {
             quickSorter(input, 0, input.length - 1);
         }
     } else {
-        if (input != Array) {
+        if (!Array.isArray(input)) {
             throw "Input is not an array.";
         }
     }
